@@ -16,7 +16,9 @@ public class Member {
 
     private String name;
 
-    @Embedded // 내장타입인지 확인하기 위한
+    // 내장타입인지 확인하기 위한
+    // Address에 있으면 굳이 Embedded를 작성 안해도 되지만 가독성을 위한 선택
+    @Embedded
     private Address address;
 
     @OneToMany(mappedBy = "member")

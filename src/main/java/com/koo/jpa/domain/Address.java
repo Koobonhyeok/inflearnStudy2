@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import javax.persistence.Embeddable;
 
-@Embeddable
+@Embeddable // Member의 가독성을 위한 선택?
 @Getter
 public class Address {
 

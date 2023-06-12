@@ -18,6 +18,8 @@ public class Order {
     private Long id;
 
     // 다대일 관계    n:1
+    // 기본 fetch는 EAGER이고 LAZY로 설정을 하지 않으면 성능에 문제가 생길 수 있음
+    // 모든 ManyToOne에는 LAZY로 설정을 변경해 주는 것이 좋음
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private  Member member;
