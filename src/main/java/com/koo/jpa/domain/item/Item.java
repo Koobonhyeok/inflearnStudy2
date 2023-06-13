@@ -7,7 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // SINGLE_TABLE로 설정시 Item을 extends를 한게 한개의 테이블로 생성
 @Getter @Setter
 public abstract class Item {
 
